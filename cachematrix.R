@@ -34,3 +34,25 @@ cacheSolve <- function(x, ...) {
   x$setInverse(invMatrix)
   return(invMatrix)
 }
+
+
+###### Program Test
+
+TestMatrix <- matrix(1:8,3,3)
+TestMatrix
+
+CacheMatrix <- makeCacheMatrix(TestMatrix)
+CacheMatrix$getMatrix()
+CacheMatrix$getInverse()
+
+cacheSolve(CacheMatrix)
+
+
+TestMatrix <- matrix(c(1,2,3,4), 3, 3)
+TestMatrix
+
+CacheMatrix <- makeCacheMatrix(TestMatrix)
+CacheMatrix$getMatrix()
+CacheMatrix$getInverse()
+
+cacheSolve(CacheMatrix)
